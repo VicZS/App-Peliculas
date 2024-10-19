@@ -1,0 +1,11 @@
+<swiper-container [slidesPerView]="1.2" [freeMode]="true">
+
+  <swiper-slide *ngFor="let pelicula of peliculas | filtroImagen">
+    
+    <ion-card (click)="verDetalle( pelicula.id)" >
+      <img [src]="pelicula.backdrop_path ? (pelicula.backdrop_path | imagen) : './assets/no-image-banner.jpg'">
+    </ion-card>
+
+  </swiper-slide>
+
+</swiper-container>
